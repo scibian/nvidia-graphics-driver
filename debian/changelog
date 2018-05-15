@@ -1,3 +1,9 @@
+nvidia-graphics-drivers (390.48-2~bpo9+3sci9+nv390u1) scibian9+nv390; urgency=medium
+
+  * Rebuild for scibian9+nv390.
+
+ -- Rémi Palancher <remi-externe.palancher@edf.fr>  Tue, 15 May 2018 16:58:23 +0200
+
 nvidia-graphics-drivers (390.48-2~bpo9+3) stretch-backports; urgency=medium
 
   * Add Conflicts against glvnd-aware MESA >= 17 from stretch-backports.
