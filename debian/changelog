@@ -1,3 +1,9 @@
+nvidia-graphics-drivers (396.54-1sci8+nv396u1) scibian8+nv396; urgency=medium
+
+  * Backport to scibian8
+
+ -- Rémi Palancher <remi-externe.palancher@edf.fr>  Mon, 05 Nov 2018 14:52:37 +0100
+
 nvidia-graphics-drivers (396.54-1) experimental; urgency=medium
 
   * New upstream short lived branch release 396.54 (2018-08-21).
