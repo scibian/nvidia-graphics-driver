@@ -116,6 +116,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glBufferPageCommitmentARB@Base 346
  glBufferStorage@Base 331
  glBufferStorageEXT@Base 349
+ glBufferStorageMemEXT@Base 410.73
  glBufferSubData@Base 1.0.6106
  glBufferSubDataARB@Base 1.0.4349
  glCallCommandListNV@Base 346
@@ -155,13 +156,16 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glClearNamedFramebufferuiv@Base 346
  glClearStencil@Base 1.0.4349
  glClearTexImage@Base 331
+ glClearTexImageEXT@Base 410.73
  glClearTexSubImage@Base 331
+ glClearTexSubImageEXT@Base 410.73
  glClientActiveTexture@Base 1.0.4349
  glClientActiveTextureARB@Base 1.0.4349
  glClientAttribDefaultEXT@Base 180
  glClientWaitSync@Base 190.18.05
  glClientWaitSyncValueuiNVX@Base 285
  glClipControl@Base 346
+ glClipControlEXT@Base 410.73
  glClipPlane@Base 1.0.4349
  glClipPlanef@Base 302
  glClipPlanex@Base 302
@@ -266,6 +270,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glCompressedTextureSubImage3D@Base 346
  glCompressedTextureSubImage3DEXT@Base 180
  glConservativeRasterParameterfNV@Base 352
+ glConservativeRasterParameteriNV@Base 410.73
  glConvolutionFilter1D@Base 1.0.4349
  glConvolutionFilter2D@Base 1.0.4349
  glConvolutionParameterf@Base 1.0.4349
@@ -315,6 +320,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glCreateBuffers@Base 346
  glCreateCommandListsNV@Base 346
  glCreateFramebuffers@Base 346
+ glCreateMemoryObjectsEXT@Base 410.73
  glCreateProgram@Base 1.0.7664
  glCreateProgramObjectARB@Base 1.0.6106
  glCreateProgramPipelines@Base 346
@@ -353,6 +359,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glDeleteFramebuffersEXT@Base 1.0.7664
  glDeleteFramebuffersOES@Base 325
  glDeleteLists@Base 1.0.4349
+ glDeleteMemoryObjectsEXT@Base 384.69
  glDeleteNamedStringARB@Base 270
  glDeleteObjectARB@Base 1.0.6106
  glDeleteOcclusionQueriesNV@Base 1.0.4349
@@ -365,10 +372,12 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glDeleteQueries@Base 1.0.6106
  glDeleteQueriesARB@Base 1.0.5328
  glDeleteQueriesEXT@Base 331
+ glDeleteQueryResourceTagNV@Base 410.73
  glDeleteRenderbuffers@Base 180
  glDeleteRenderbuffersEXT@Base 1.0.7664
  glDeleteRenderbuffersOES@Base 325
  glDeleteSamplers@Base 256
+ glDeleteSemaphoresEXT@Base 410.73
  glDeleteShader@Base 1.0.7664
  glDeleteStatesNV@Base 346
  glDeleteSync@Base 190.18.05
@@ -386,10 +395,12 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glDepthRange@Base 1.0.4349
  glDepthRangeArraydvNV@Base 260
  glDepthRangeArrayfvNV@Base 346
+ glDepthRangeArrayfvOES@Base 410.73
  glDepthRangeArrayv@Base 260
  glDepthRangeIndexed@Base 260
  glDepthRangeIndexeddNV@Base 260
  glDepthRangeIndexedfNV@Base 346
+ glDepthRangeIndexedfOES@Base 410.73
  glDepthRangedNV@Base 1.0.9746
  glDepthRangef@Base 260
  glDepthRangex@Base 302
@@ -467,9 +478,11 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glDrawTransformFeedback@Base 256
  glDrawTransformFeedbackEXT@Base 190.36
  glDrawTransformFeedbackInstanced@Base 285
+ glDrawTransformFeedbackInstancedEXT@Base 410.73
  glDrawTransformFeedbackNV@Base 165
  glDrawTransformFeedbackStream@Base 256
  glDrawTransformFeedbackStreamInstanced@Base 285
+ glDrawVkImageNV@Base 410.73
  glEdgeFlag@Base 1.0.4349
  glEdgeFlagFormatNV@Base 185
  glEdgeFlagPointer@Base 1.0.4349
@@ -576,6 +589,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glFramebufferTextureLayerARB@Base 180
  glFramebufferTextureLayerEXT@Base 1.0.9746
  glFramebufferTextureLayerNV@Base 319
+ glFramebufferTextureMultiviewOVR@Base 361
  glFramebufferTextureOES@Base 349
  glFrontFace@Base 1.0.4349
  glFrustum@Base 1.0.4349
@@ -597,10 +611,12 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glGenQueries@Base 1.0.6106
  glGenQueriesARB@Base 1.0.5328
  glGenQueriesEXT@Base 331
+ glGenQueryResourceTagNV@Base 410.73
  glGenRenderbuffers@Base 180
  glGenRenderbuffersEXT@Base 1.0.7664
  glGenRenderbuffersOES@Base 325
  glGenSamplers@Base 256
+ glGenSemaphoresEXT@Base 410.73
 #MISSING: 331# glGenStatesNV@Base 260
  glGenTextures@Base 1.0.4349
  glGenTexturesEXT@Base 1.0.4349
@@ -688,6 +704,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glGetFloati_v@Base 260
  glGetFloati_vEXT@Base 185
  glGetFloati_vNV@Base 346
+ glGetFloati_vOES@Base 410.73
  glGetFloatv@Base 1.0.4349
  glGetFragDataIndex@Base 256
  glGetFragDataIndexEXT@Base 361
@@ -728,6 +745,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glGetMaterialfv@Base 1.0.4349
  glGetMaterialiv@Base 1.0.4349
  glGetMaterialxv@Base 302
+ glGetMemoryObjectParameterivEXT@Base 410.73
  glGetMinmax@Base 1.0.4349
  glGetMinmaxParameterfv@Base 1.0.4349
  glGetMinmaxParameteriv@Base 1.0.4349
@@ -864,6 +882,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glGetSamplerParameterIuivOES@Base 349
  glGetSamplerParameterfv@Base 256
  glGetSamplerParameteriv@Base 256
+ glGetSemaphoreParameterui64vEXT@Base 410.73
  glGetSeparableFilter@Base 1.0.4349
  glGetShaderInfoLog@Base 1.0.7664
  glGetShaderPrecisionFormat@Base 260
@@ -950,6 +969,8 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glGetUniformui64vNV@Base 185
  glGetUniformuiv@Base 180
  glGetUniformuivEXT@Base 1.0.9746
+ glGetUnsignedBytei_vEXT@Base 410.73
+ glGetUnsignedBytevEXT@Base 410.73
  glGetVaryingLocationNV@Base 1.0.9746
  glGetVertexArrayIndexed64iv@Base 346
  glGetVertexArrayIndexediv@Base 346
@@ -988,6 +1009,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glGetVideoivNV@Base 173
  glGetVideoui64vNV@Base 173
  glGetVideouivNV@Base 173
+ glGetVkProcAddrNV@Base 410.73
  glGetnColorTable@Base 346
  glGetnColorTableARB@Base 260
  glGetnCompressedTexImage@Base 346
@@ -1037,6 +1059,8 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glGpuSyncReleaseNVX@Base 1.0.9625
  glHint@Base 1.0.4349
  glHistogram@Base 1.0.4349
+ glImportMemoryFdEXT@Base 384.69
+ glImportSemaphoreFdEXT@Base 384.69
  glImportSyncEXT@Base 275.09.04
  glIndexFormatNV@Base 185
  glIndexMask@Base 1.0.4349
@@ -1080,6 +1104,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glIsImageHandleResidentARB@Base 331
  glIsImageHandleResidentNV@Base 290
  glIsList@Base 1.0.4349
+ glIsMemoryObjectEXT@Base 410.73
  glIsNamedBufferResidentNV@Base 185
  glIsNamedStringARB@Base 270
  glIsOcclusionQueryNV@Base 1.0.4349
@@ -1098,6 +1123,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glIsRenderbufferEXT@Base 1.0.7664
  glIsRenderbufferOES@Base 325
  glIsSampler@Base 256
+ glIsSemaphoreEXT@Base 410.73
  glIsShader@Base 1.0.7664
  glIsStateNV@Base 346
  glIsSync@Base 190.18.05
@@ -1208,9 +1234,11 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glMatrixTranslatedEXT@Base 180
  glMatrixTranslatefEXT@Base 180
  glMaxShaderCompilerThreadsARB@Base 358
+ glMaxShaderCompilerThreadsKHR@Base 410.73
  glMemoryBarrier@Base 285
  glMemoryBarrierByRegion@Base 337
  glMemoryBarrierEXT@Base 195
+ glMemoryObjectParameterivEXT@Base 410.73
  glMinSampleShading@Base 256
  glMinSampleShadingARB@Base 190.18.05
  glMinSampleShadingOES@Base 337
@@ -1229,6 +1257,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glMultiDrawArraysIndirectAMD@Base 302
  glMultiDrawArraysIndirectBindlessCountNV@Base 340
  glMultiDrawArraysIndirectBindlessNV@Base 325
+ glMultiDrawArraysIndirectCount@Base 410.73
  glMultiDrawArraysIndirectCountARB@Base 331
  glMultiDrawArraysIndirectEXT@Base 346
  glMultiDrawElements@Base 1.0.4349
@@ -1238,6 +1267,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glMultiDrawElementsIndirectAMD@Base 302
  glMultiDrawElementsIndirectBindlessCountNV@Base 340
  glMultiDrawElementsIndirectBindlessNV@Base 325
+ glMultiDrawElementsIndirectCount@Base 410.73
  glMultiDrawElementsIndirectCountARB@Base 331
  glMultiDrawElementsIndirectEXT@Base 346
  glMultiTexBufferEXT@Base 180
@@ -1359,6 +1389,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glNamedBufferPageCommitmentEXT@Base 346
  glNamedBufferStorage@Base 346
  glNamedBufferStorageEXT@Base 331
+ glNamedBufferStorageMemEXT@Base 410.73
  glNamedBufferSubData@Base 346
  glNamedBufferSubDataEXT@Base 180
  glNamedCopyBufferSubDataEXT@Base 190
@@ -1485,6 +1516,7 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glPolygonMode@Base 1.0.4349
  glPolygonModeNV@Base 349
  glPolygonOffset@Base 1.0.4349
+ glPolygonOffsetClamp@Base 410.73
  glPolygonOffsetClampEXT@Base 346
  glPolygonOffsetx@Base 302
  glPolygonStipple@Base 1.0.4349
@@ -1782,10 +1814,13 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glScissor@Base 1.0.4349
  glScissorArrayv@Base 260
  glScissorArrayvNV@Base 346
+ glScissorArrayvOES@Base 410.73
  glScissorIndexed@Base 260
  glScissorIndexedNV@Base 346
+ glScissorIndexedOES@Base 410.73
  glScissorIndexedv@Base 260
  glScissorIndexedvNV@Base 346
+ glScissorIndexedvOES@Base 410.73
  glSecondaryColor3b@Base 1.0.4349
  glSecondaryColor3bEXT@Base 1.0.4349
  glSecondaryColor3bv@Base 1.0.4349
@@ -1964,6 +1999,11 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glTexStorage3DEXT@Base 285
  glTexStorage3DMultisample@Base 310
  glTexStorage3DMultisampleOES@Base 337
+ glTexStorageMem1DEXT@Base 410.73
+ glTexStorageMem2DEXT@Base 410.73
+ glTexStorageMem2DMultisampleEXT@Base 410.73
+ glTexStorageMem3DEXT@Base 410.73
+ glTexStorageMem3DMultisampleEXT@Base 410.73
  glTexSubImage1D@Base 1.0.4349
  glTexSubImage2D@Base 1.0.4349
  glTexSubImage3D@Base 1.0.4349
@@ -2007,6 +2047,11 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glTextureStorage3DEXT@Base 285
  glTextureStorage3DMultisample@Base 346
  glTextureStorage3DMultisampleEXT@Base 310
+ glTextureStorageMem1DEXT@Base 410.73
+ glTextureStorageMem2DEXT@Base 410.73
+ glTextureStorageMem2DMultisampleEXT@Base 410.73
+ glTextureStorageMem3DEXT@Base 410.73
+ glTextureStorageMem3DMultisampleEXT@Base 410.73
  glTextureSubImage1D@Base 346
  glTextureSubImage1DEXT@Base 180
  glTextureSubImage2D@Base 346
@@ -2474,13 +2519,19 @@ libGL.so.1 libgl1 (>= 0.2.999) | libgl1-mesa-glx
  glViewport@Base 1.0.4349
  glViewportArrayv@Base 260
  glViewportArrayvNV@Base 346
+ glViewportArrayvOES@Base 410.73
  glViewportIndexedf@Base 260
  glViewportIndexedfNV@Base 346
+ glViewportIndexedfOES@Base 410.73
  glViewportIndexedfv@Base 260
  glViewportIndexedfvNV@Base 346
+ glViewportIndexedfvOES@Base 410.73
+ glViewportPositionWScaleNV@Base 410.73
  glViewportSwizzleNV@Base 343
+ glWaitSemaphoreEXT@Base 410.73
  glWaitSync@Base 190.18.05
  glWaitSyncValueuiNVX@Base 285
+ glWaitVkSemaphoreNV@Base 410.73
  glWeightPathsNV@Base 275
  glWeightPointerOES@Base 349
  glWindowBackBufferHintAutodesk@Base 1.0.4349
