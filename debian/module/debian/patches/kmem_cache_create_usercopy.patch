@@ -34,14 +34,3 @@ Bug: https://devtalk.nvidia.com/default/topic/1031067
  #define NV_KMEM_CACHE_DESTROY(kmem_cache)   \
      kmem_cache_destroy(kmem_cache)
  
---- a/nvidia/nv.c
-+++ b/nvidia/nv.c
-@@ -793,7 +793,7 @@ int __init nvidia_init_module(void)
- 
-     nv_memdbg_init();
- 
--    nvidia_stack_t_cache = NV_KMEM_CACHE_CREATE(nvidia_stack_cache_name,
-+    nvidia_stack_t_cache = NV_KMEM_CACHE_CREATE_USERCOPY(nvidia_stack_cache_name,
-                                                 nvidia_stack_t);
-     if (nvidia_stack_t_cache == NULL)
-     {
