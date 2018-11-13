@@ -1,3 +1,16 @@
+nvidia-graphics-drivers (410.73-0sci8+nv410u1) scibian8+nv410; urgency=medium
+
+  * New upstream version 410.73
+  * Update patches for new upstream release
+  * Update libnvidia-egl-wayland v1.0.3→1.1.0
+  * libglx.so has been renamed libglxserver_nvidia.so
+  * Add new nvidia PCI IDs
+  * Update libraries symbols files
+  * Update deps for module to match scibian8/jessie
+  * Decrease d/compat for module to match s8/jessie
+
+ -- Rémi Palancher <remi-externe.palancher@edf.fr>  Tue, 13 Nov 2018 09:40:12 +0100
+
 nvidia-graphics-drivers (396.54-1sci8+nv396u1) scibian8+nv396; urgency=medium
 
   * Backport to scibian8
