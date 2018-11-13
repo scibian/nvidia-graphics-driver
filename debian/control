@@ -1014,7 +1014,8 @@ Section: non-free/kernel
 Architecture: amd64 ppc64el
 Depends:
  debhelper (>= 9),
- make:any,
+ dh-strip-nondeterminism,
+ make,
  quilt,
  xz-utils,
  ${misc:Depends}
