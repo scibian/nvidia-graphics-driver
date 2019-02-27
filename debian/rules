@@ -300,7 +300,7 @@ override_dh_gencontrol:
 		-V'nvidia:LegacyDescShort=$(legacy_description_short)' \
 		-V'nvidia:legacy-check=$(NVIDIA_LEGACY_CHECK)' \
 		-V'nvidia-settings=$(NVIDIA_SETTINGS)' \
-		-V'nvidia:kmod:binary=$${nvidia}-kernel-dkms (= $${binary:Version}) | $${nvidia}-kernel-$${nvidia:Version}' \
+		-V'nvidia:kmod:binary=$${nvidia}-kernel-dkms (= $${binary:Version}) | $${nvidia}-kernel-$(DEB_HOST_ARCH)' \
 		-V'nvidia:kmod:source=$${nvidia}-kernel-dkms (>= $${nvidia:Version}) | $${nvidia}-kernel-source (>= $${nvidia:Version})' \
 		-V'nvidia:kmod:tested:Linux=$(strip $(or $(LINUX_KMOD_TESTED_$(DEB_HOST_ARCH)),$(LINUX_KMOD_TESTED),???))' \
 		-V'nvidia:kmod:blob:archlist=$(subst $(space),$(comma)$(space),$(BLOB_ARCH_LIST)) architecture$(if $(filter 1,$(words $(BLOB_ARCH_LIST))),,s)' \
