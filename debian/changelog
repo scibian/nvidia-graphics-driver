@@ -1,5 +1,11 @@
 nvidia-graphics-drivers (410.73-0sci8+nv410u1) scibian8+nv410; urgency=medium
 
+  * Fix depend bug on nvidia-kernel
+
+ -- MHamed Bouaziz <mhamed-externe.bouaziz@edf.fr>  Wed, 27 Feb 2019 12:26:57 +0100
+
+nvidia-graphics-drivers (410.73-0sci8+nv410u1) scibian8+nv410; urgency=medium
+
   * New upstream version 410.73
   * Update patches for new upstream release
   * Update libnvidia-egl-wayland v1.0.3→1.1.0
