@@ -1,4 +1,4 @@
-nvidia-graphics-drivers (410.73-0sci8+nv410u1) scibian8+nv410; urgency=medium
+nvidia-graphics-drivers (410.73-0sci8+nv410u2) scibian8+nv410; urgency=medium
 
   * Fix depend bug on nvidia-kernel
 
