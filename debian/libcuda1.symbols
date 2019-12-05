@@ -1,4 +1,5 @@
 libcuda.so.1 #PACKAGE# #MINVER#
+* Build-Depends-Package: #PACKAGE#
 #MISSING: 304.30# clGetExtensionFunctionAddress@Base 195
 #MISSING: 304.30# clGetPlatformInfo@Base 195.30
  cuArray3DCreate@Base 177
@@ -35,8 +36,8 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuCtxSetLimit@Base 256
  cuCtxSetSharedMemConfig@Base 295.33
  cuCtxSynchronize@Base 169
- cuDestroyExternalMemory@Base 410.73
- cuDestroyExternalSemaphore@Base 410.73
+ cuDestroyExternalMemory@Base 410
+ cuDestroyExternalSemaphore@Base 410
  cuDeviceCanAccessPeer@Base 270
  cuDeviceComputeCapability@Base 169
  cuDeviceGet@Base 169
@@ -44,6 +45,7 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuDeviceGetByPCIBusId@Base 285
  cuDeviceGetCount@Base 169
  cuDeviceGetName@Base 169
+ cuDeviceGetNvSciSyncAttributes@Base 440
  cuDeviceGetP2PAttribute@Base 361
  cuDeviceGetPCIBusId@Base 285
  cuDeviceGetProperties@Base 169
@@ -56,17 +58,17 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuDeviceTotalMem@Base 169
  cuDeviceTotalMem_v2@Base 260
  cuDriverGetVersion@Base 185
- (arch=!i386)cuEGLApiInit@Base 390
-#MISSING: 390# (arch=!i386)cuEGLInit@Base 346
- (arch=!i386)cuEGLStreamConsumerAcquireFrame@Base 346
- (arch=!i386)cuEGLStreamConsumerConnect@Base 346
- (arch=!i386)cuEGLStreamConsumerConnectWithFlags@Base 367.44
- (arch=!i386)cuEGLStreamConsumerDisconnect@Base 346
- (arch=!i386)cuEGLStreamConsumerReleaseFrame@Base 346
- (arch=!i386)cuEGLStreamProducerConnect@Base 346
- (arch=!i386)cuEGLStreamProducerDisconnect@Base 346
- (arch=!i386)cuEGLStreamProducerPresentFrame@Base 349
- (arch=!i386)cuEGLStreamProducerReturnFrame@Base 349
+ (arch=amd64)cuEGLApiInit@Base 390
+#MISSING: 390# (arch=amd64)cuEGLInit@Base 346
+ (arch=amd64)cuEGLStreamConsumerAcquireFrame@Base 346
+ (arch=amd64)cuEGLStreamConsumerConnect@Base 346
+ (arch=amd64)cuEGLStreamConsumerConnectWithFlags@Base 367.44
+ (arch=amd64)cuEGLStreamConsumerDisconnect@Base 346
+ (arch=amd64)cuEGLStreamConsumerReleaseFrame@Base 346
+ (arch=amd64)cuEGLStreamProducerConnect@Base 346
+ (arch=amd64)cuEGLStreamProducerDisconnect@Base 346
+ (arch=amd64)cuEGLStreamProducerPresentFrame@Base 349
+ (arch=amd64)cuEGLStreamProducerReturnFrame@Base 349
  cuEventCreate@Base 169
  cuEventDestroy@Base 169
  cuEventDestroy_v2@Base 270
@@ -75,8 +77,8 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuEventRecord@Base 169
  cuEventRecord_ptsz@Base 346
  cuEventSynchronize@Base 169
- cuExternalMemoryGetMappedBuffer@Base 410.73
- cuExternalMemoryGetMappedMipmappedArray@Base 410.73
+ cuExternalMemoryGetMappedBuffer@Base 410
+ cuExternalMemoryGetMappedMipmappedArray@Base 410
  cuFuncGetAttribute@Base 185
  cuFuncSetAttribute@Base 384
  cuFuncSetBlockShape@Base 169
@@ -102,44 +104,49 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuGetErrorName@Base 331
  cuGetErrorString@Base 331
  cuGetExportTable@Base 195.30
- cuGraphAddChildGraphNode@Base 410.73
+ cuGraphAddChildGraphNode@Base 410
  cuGraphAddDependencies@Base 410
- cuGraphAddEmptyNode@Base 410.73
- cuGraphAddHostNode@Base 410.73
- cuGraphAddKernelNode@Base 410.73
- cuGraphAddMemcpyNode@Base 410.73
- cuGraphAddMemsetNode@Base 410.73
- cuGraphChildGraphNodeGetGraph@Base 410.73
- cuGraphClone@Base 410.73
- cuGraphCreate@Base 410.73
- cuGraphDestroy@Base 410.73
- cuGraphDestroyNode@Base 410.73
- cuGraphExecDestroy@Base 410.73
- cuGraphGetEdges@Base 410.73
- cuGraphGetNodes@Base 410.73
- cuGraphGetRootNodes@Base 410.73
- cuGraphHostNodeGetParams@Base 410.73
- cuGraphHostNodeSetParams@Base 410.73
- cuGraphInstantiate@Base 410.73
- cuGraphKernelNodeGetParams@Base 410.73
- cuGraphKernelNodeSetParams@Base 410.73
- cuGraphLaunch@Base 410.73
- cuGraphLaunch_ptsz@Base 410.73
- cuGraphMemcpyNodeGetParams@Base 410.73
- cuGraphMemcpyNodeSetParams@Base 410.73
- cuGraphMemsetNodeGetParams@Base 410.73
- cuGraphMemsetNodeSetParams@Base 410.73
- cuGraphNodeFindInClone@Base 410.73
- cuGraphNodeGetDependencies@Base 410.73
- cuGraphNodeGetDependentNodes@Base 410.73
- cuGraphNodeGetType@Base 410.73
- cuGraphRemoveDependencies@Base 410.73
- (arch=!i386)cuGraphicsEGLRegisterImage@Base 346
+ cuGraphAddEmptyNode@Base 410
+ cuGraphAddHostNode@Base 410
+ cuGraphAddKernelNode@Base 410
+ cuGraphAddMemcpyNode@Base 410
+ cuGraphAddMemsetNode@Base 410
+ cuGraphChildGraphNodeGetGraph@Base 410
+ cuGraphClone@Base 410
+ cuGraphCreate@Base 410
+ cuGraphDestroy@Base 410
+ cuGraphDestroyNode@Base 410
+ cuGraphExecDestroy@Base 410
+ cuGraphExecHostNodeSetParams@Base 440
+ cuGraphExecKernelNodeSetParams@Base 418
+ cuGraphExecMemcpyNodeSetParams@Base 440
+ cuGraphExecMemsetNodeSetParams@Base 440
+ cuGraphExecUpdate@Base 440
+ cuGraphGetEdges@Base 410
+ cuGraphGetNodes@Base 410
+ cuGraphGetRootNodes@Base 410
+ cuGraphHostNodeGetParams@Base 410
+ cuGraphHostNodeSetParams@Base 410
+ cuGraphInstantiate@Base 410
+ cuGraphKernelNodeGetParams@Base 410
+ cuGraphKernelNodeSetParams@Base 410
+ cuGraphLaunch@Base 410
+ cuGraphLaunch_ptsz@Base 410
+ cuGraphMemcpyNodeGetParams@Base 410
+ cuGraphMemcpyNodeSetParams@Base 410
+ cuGraphMemsetNodeGetParams@Base 410
+ cuGraphMemsetNodeSetParams@Base 410
+ cuGraphNodeFindInClone@Base 410
+ cuGraphNodeGetDependencies@Base 410
+ cuGraphNodeGetDependentNodes@Base 410
+ cuGraphNodeGetType@Base 410
+ cuGraphRemoveDependencies@Base 410
+ (arch=amd64)cuGraphicsEGLRegisterImage@Base 346
  cuGraphicsGLRegisterBuffer@Base 195
  cuGraphicsGLRegisterImage@Base 195
  cuGraphicsMapResources@Base 195
  cuGraphicsMapResources_ptsz@Base 346
- (arch=!i386)cuGraphicsResourceGetMappedEglFrame@Base 349
+ (arch=amd64)cuGraphicsResourceGetMappedEglFrame@Base 349
  cuGraphicsResourceGetMappedMipmappedArray@Base 304
  cuGraphicsResourceGetMappedPointer@Base 195
  cuGraphicsResourceGetMappedPointer_v2@Base 260
@@ -151,8 +158,8 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuGraphicsUnregisterResource@Base 195
  cuGraphicsVDPAURegisterOutputSurface@Base 256
  cuGraphicsVDPAURegisterVideoSurface@Base 256
- cuImportExternalMemory@Base 410.73
- cuImportExternalSemaphore@Base 410.73
+ cuImportExternalMemory@Base 410
+ cuImportExternalSemaphore@Base 410
  cuInit@Base 169
  cuIpcCloseMemHandle@Base 285.05
  cuIpcGetEventHandle@Base 285.05
@@ -167,8 +174,8 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuLaunchCooperativeKernel_ptsz@Base 384
  cuLaunchGrid@Base 169
  cuLaunchGridAsync@Base 169
- cuLaunchHostFunc@Base 410.73
- cuLaunchHostFunc_ptsz@Base 410.73
+ cuLaunchHostFunc@Base 410
+ cuLaunchHostFunc_ptsz@Base 410
  cuLaunchKernel@Base 270
  cuLaunchKernel_ptsz@Base 346
  cuLinkAddData@Base 319
@@ -179,6 +186,8 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuLinkCreate@Base 319
  cuLinkCreate_v2@Base 340
  cuLinkDestroy@Base 319
+ cuMemAddressFree@Base 440
+ cuMemAddressReserve@Base 440
  cuMemAdvise@Base 361.28
  cuMemAlloc@Base 169
  cuMemAllocHost@Base 169
@@ -187,11 +196,16 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuMemAllocPitch@Base 169
  cuMemAllocPitch_v2@Base 260
  cuMemAlloc_v2@Base 260
+ cuMemCreate@Base 440
+ cuMemExportToShareableHandle@Base 440
  cuMemFree@Base 169
  cuMemFreeHost@Base 169
  cuMemFree_v2@Base 260
+ cuMemGetAccess@Base 440
  cuMemGetAddressRange@Base 169
  cuMemGetAddressRange_v2@Base 260
+ cuMemGetAllocationGranularity@Base 440
+ cuMemGetAllocationPropertiesFromHandle@Base 440
  cuMemGetAttribute@Base 190
  cuMemGetAttribute_v2@Base 270
  cuMemGetInfo@Base 169
@@ -203,10 +217,15 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuMemHostRegister@Base 270
  cuMemHostRegister_v2@Base 340
  cuMemHostUnregister@Base 270
+ cuMemImportFromShareableHandle@Base 440
+ cuMemMap@Base 440
  cuMemPrefetchAsync@Base 367
  cuMemPrefetchAsync_ptsz@Base 367
  cuMemRangeGetAttribute@Base 367.44
  cuMemRangeGetAttributes@Base 367.44
+ cuMemRelease@Base 440
+ cuMemSetAccess@Base 440
+ cuMemUnmap@Base 440
  cuMemcpy2D@Base 169
  cuMemcpy2DAsync@Base 169
  cuMemcpy2DAsync_v2@Base 260
@@ -316,6 +335,7 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuModuleLoadDataEx@Base 180
  cuModuleLoadFatBinary@Base 169
  cuModuleUnload@Base 169
+ cuOccupancyAvailableDynamicSMemPerBlock@Base 440
  cuOccupancyMaxActiveBlocksPerMultiprocessor@Base 340
  cuOccupancyMaxActiveBlocksPerMultiprocessorWithFlags@Base 346
  cuOccupancyMaxPotentialBlockSize@Base 340
@@ -331,30 +351,34 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuProfilerInitialize@Base 270
  cuProfilerStart@Base 270
  cuProfilerStop@Base 270
- cuSignalExternalSemaphoresAsync@Base 410.73
- cuSignalExternalSemaphoresAsync_ptsz@Base 410.73
+ cuSignalExternalSemaphoresAsync@Base 410
+ cuSignalExternalSemaphoresAsync_ptsz@Base 410
  cuStreamAddCallback@Base 304
  cuStreamAddCallback_ptsz@Base 346
  cuStreamAttachMemAsync@Base 331.38
  cuStreamAttachMemAsync_ptsz@Base 346
  cuStreamBatchMemOp@Base 361.42
  cuStreamBatchMemOp_ptsz@Base 361.42
- cuStreamBeginCapture@Base 410.73
- cuStreamBeginCapture_ptsz@Base 410.73
+ cuStreamBeginCapture@Base 410
+ cuStreamBeginCapture_ptsz@Base 410
+ cuStreamBeginCapture_v2@Base 418
+ cuStreamBeginCapture_v2_ptsz@Base 418
  cuStreamCreate@Base 169
  cuStreamCreateWithPriority@Base 319
  cuStreamDestroy@Base 169
  cuStreamDestroy_v2@Base 270
- cuStreamEndCapture@Base 410.73
- cuStreamEndCapture_ptsz@Base 410.73
+ cuStreamEndCapture@Base 410
+ cuStreamEndCapture_ptsz@Base 410
+ cuStreamGetCaptureInfo@Base 418
+ cuStreamGetCaptureInfo_ptsz@Base 418
  cuStreamGetCtx@Base 396
  cuStreamGetCtx_ptsz@Base 396
  cuStreamGetFlags@Base 319
  cuStreamGetFlags_ptsz@Base 346
  cuStreamGetPriority@Base 319
  cuStreamGetPriority_ptsz@Base 346
- cuStreamIsCapturing@Base 410.73
- cuStreamIsCapturing_ptsz@Base 410.73
+ cuStreamIsCapturing@Base 410
+ cuStreamIsCapturing_ptsz@Base 410
  cuStreamQuery@Base 169
  cuStreamQuery_ptsz@Base 346
  cuStreamSynchronize@Base 169
@@ -410,11 +434,12 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cuTexRefSetMipmapLevelBias@Base 304
  cuTexRefSetMipmapLevelClamp@Base 304
  cuTexRefSetMipmappedArray@Base 304
+ cuThreadExchangeStreamCaptureMode@Base 418
  cuVDPAUCtxCreate@Base 256
  cuVDPAUCtxCreate_v2@Base 260
  cuVDPAUGetDevice@Base 256
- cuWaitExternalSemaphoresAsync@Base 410.73
- cuWaitExternalSemaphoresAsync_ptsz@Base 410.73
+ cuWaitExternalSemaphoresAsync@Base 410
+ cuWaitExternalSemaphoresAsync_ptsz@Base 410
  cudbgApiAttach@Base 331.20
  cudbgApiClientPid@Base 331.20
  cudbgApiClientRevision@Base 331.20
@@ -428,6 +453,7 @@ libcuda.so.1 #PACKAGE# #MINVER#
  cudbgEnablePreemptionDebugging@Base 331.20
  cudbgGetAPI@Base 195
  cudbgGetAPIVersion@Base 195
+ cudbgInjectionPath@Base 440
  cudbgIpcFlag@Base 331.20
  cudbgMain@Base 304
  cudbgReportDriverApiError@Base 331.20
