@@ -141,14 +141,15 @@ endif
 	ls -al
 	touch $@
 
-nvidia_icd.json.template	 = NVIDIA-Linux/nvidia_icd.json.template
-$(nvidia_icd.json.template): unpack-stamp
-glvnd/nvidia_icd.json: $(nvidia_icd.json.template)
+nvidia_icd.json	 = NVIDIA-Linux/nvidia_icd.json
+$(nvidia_icd.json): unpack-stamp
+glvnd/nvidia_icd.json: $(nvidia_icd.json)
 	mkdir -p $(@D)
-	sed 's/__NV_VK_ICD__/libGLX_nvidia.so.0/' $< > $@
-nonglvnd/nvidia_icd.json: $(nvidia_icd.json.template)
+	cp $< $@
+
+nonglvnd/nvidia_icd.json: $(nvidia_icd.json)
 	mkdir -p $(@D)
-	sed 's/__NV_VK_ICD__/libGL.so.1/' $< > $@
+	cp $< $@
 
 debian/nv-readme.ids: debian/nv-readme.ids.common debian/nv-readme.ids.$(DEB_HOST_ARCH)
 	cat $^ | sort -u > $@
