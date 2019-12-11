@@ -1,3 +1,9 @@
+nvidia-graphics-drivers (440.36-0sci8+nv440u2) scibian8+nv440; urgency=medium
+
+  * Remove libegl1-nvidia for i386 architecture
+
+ -- Pierre Trespeuch <pierre-externe.trespeuch@edf.fr>  Wed, 11 Dec 2019 10:16:59 +0100
+
 nvidia-graphics-drivers (440.36-0sci8+nv440u1) scibian8+nv440; urgency=medium
 
   * Import new upstream version 440.36
