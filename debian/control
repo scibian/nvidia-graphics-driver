@@ -479,7 +479,7 @@ Description: Vendor neutral GL dispatch library -- libEGL
 
 #Package: libegl1-${nvidia}
 Package: libegl1-nvidia
-Architecture: i386 amd64
+Architecture: amd64
 Multi-Arch: same
 Pre-Depends:
  ${misc:Pre-Depends}
